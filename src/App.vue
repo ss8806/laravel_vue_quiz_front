@@ -1,19 +1,39 @@
 <script setup lang="ts">
-import SideBarLink from '@/components/atoms/links/SideBarLink.vue'
-import Facebook from '@/components/atoms/social/Facebook.vue'
-import Line from '@/components/atoms/social/Line.vue'
-import Linkedin from '@/components/atoms/social/Linkedin.vue'
-import Twitter from '@/components/atoms/social/Twitter.vue'
-import H3SideBarText from '@/components/atoms/texts/H3SideBarText.vue'
+import QuizSelectAnswer from '@/components/molecules/quiz/QuizSelectAnswer.vue'
+import QuizCorrectAnswer from '@/components/molecules/quiz/QuizCorrectAnswer.vue'
+import QuizResultModal from '@/components/molecules/quiz/QuizResultModal.vue'
+import QuizCommentary from '@/components/molecules/quiz/QuizCommentary.vue'
 </script>
 
 <template>
   <div class="container">
-    <Facebook />
-    <Line />
-    <Linkedin />
-    <Twitter />
-    <SideBarLink href="あ" text="あ" />
-    <H3SideBarText text="SNS共有" />
+    <QuizSelectAnswer />
+    <QuizCorrectAnswer />
+    <QuizCommentary />
+    <QuizResultModal />
   </div>
 </template>
+
+<style lang="scss">
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+main {
+  padding-top: 20px;
+  background: $gray;
+  padding-bottom: 50px;
+  min-height: 1000px;
+}
+
+article {
+  border: solid $gray;
+  background: $white;
+  width: 60%;
+}
+</style>
