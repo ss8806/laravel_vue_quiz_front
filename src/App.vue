@@ -1,13 +1,6 @@
-<script setup lang="ts">
-import RegisterForm from '@/components/organisms/form/RegisterForm.vue'
-</script>
-
 <template>
-  <div class="container">
-    <RegisterForm />
-  </div>
+  <router-view />
 </template>
-
 
 <style lang="scss">
 html {
