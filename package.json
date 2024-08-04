@@ -15,7 +15,8 @@
     "path": "^0.12.7",
     "sass": "^1.77.8",
     "vue": "^3.2.25",
-    "vue-chart-3": "^3.1.8"
+    "vue-chart-3": "^3.1.8",
+    "vue-router": "^4.4.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.4",

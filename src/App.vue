@@ -1,18 +1,13 @@
 <script setup lang="ts">
-import QuizSelectAnswer from '@/components/molecules/quiz/QuizSelectAnswer.vue'
-import QuizCorrectAnswer from '@/components/molecules/quiz/QuizCorrectAnswer.vue'
-import QuizResultModal from '@/components/molecules/quiz/QuizResultModal.vue'
-import QuizCommentary from '@/components/molecules/quiz/QuizCommentary.vue'
+import RegisterForm from '@/components/organisms/form/RegisterForm.vue'
 </script>
 
 <template>
   <div class="container">
-    <QuizSelectAnswer />
-    <QuizCorrectAnswer />
-    <QuizCommentary />
-    <QuizResultModal />
+    <RegisterForm />
   </div>
 </template>
+
 
 <style lang="scss">
 html {
