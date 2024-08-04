@@ -1,21 +1,19 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from '@/components/HelloWorld.vue'
+import SideBarLink from '@/components/atoms/links/SideBarLink.vue'
+import Facebook from '@/components/atoms/social/Facebook.vue'
+import Line from '@/components/atoms/social/Line.vue'
+import Linkedin from '@/components/atoms/social/Linkedin.vue'
+import Twitter from '@/components/atoms/social/Twitter.vue'
+import H3SideBarText from '@/components/atoms/texts/H3SideBarText.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="@/assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div class="container">
+    <Facebook />
+    <Line />
+    <Linkedin />
+    <Twitter />
+    <SideBarLink href="あ" text="あ" />
+    <H3SideBarText text="SNS共有" />
+  </div>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
