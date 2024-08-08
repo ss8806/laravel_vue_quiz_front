@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useCategories } from '@/composables/categories'
+
+const { categories, checkbox, checkAll, checkAllOff, goQuiz } = useCategories()
+</script>
+
 <template>
     <section class="home-quiz__setting">
       <h2 class="home-quiz__setting-h2">
@@ -5,37 +11,17 @@
         出題設定
       </h2>
       <form>
-        <label>
-          <input type="checkbox" name="categories[]" value="1" checked />
-          ビジネスマナー
-        </label>
-        <label>
-          <input type="checkbox" name="categories[]" value="2" />
-          一般常識
-        </label>
-        <label>
-          <input type="checkbox" name="categories[]" value="3" />
-          就職・転職
-        </label>
-        <label>
-          <input type="checkbox" name="categories[]" value="4" />
-          法律
-        </label>
-        <label>
-          <input type="checkbox" name="categories[]" value="5" />
-          IT
-        </label>
-        <label>
-          <input type="checkbox" name="categories[]" value="6" />
-          雑学
-        </label>
-        <div>
-          全項目チェック
-          <button type="button" value="1">ON</button>
-          <button type="button" value="1">OFF</button>
-        </div>
-        <button type="submit" class="btn btn-primary">出題開始</button>
-      </form>
+      <label v-for="(category, index) in categories" :key="index"><!-- ハードコーディングしていたlabelをv-forに編集 -->
+        <input type="checkbox" v-model="checkbox" :value="category.id" checked /> <!-- ハードコーディングしていたチェックボックスを編集 -->
+        {{ category.name }}&ensp; <!-- ハードコーディングしていたカテゴリ名を編集 -->
+      </label>
+      <div>
+        全項目チェック
+        <button type="button" @click="checkAll">ON</button> <!-- @click="checkAllを追加 -->
+        <button type="button" @click="checkAllOff">OFF</button> <!-- @click="checkAllOff"を追加 -->
+      </div>
+      <button type="button" class="btn btn-primary" @click="goQuiz">出題開始</button> <!-- @click="goQuiz"を追加 -->
+    </form>
     </section>
   </template>
   
